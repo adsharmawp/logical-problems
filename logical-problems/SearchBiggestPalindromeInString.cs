@@ -8,6 +8,8 @@ namespace logical_problems
 {
     public class SearchBiggestPalindromeInString : Logic
     {
+        // Input: 'nitinspeaksmalayalam' || Output: 'malayalam'
+        // Input: 'nitinsalas'           || Output: 'nitin,salas'
         public SearchBiggestPalindromeInString()
         {
             this.InputString = "Enter string to search biggest palindrome (Ex: nitinspeaksmalayalam):";
@@ -20,6 +22,7 @@ namespace logical_problems
             if (string.IsNullOrEmpty(inputString)) return string.Empty;
             
             int inputStringLength = inputString.Length;
+
             // start search with biggest character set to lower character set for optimized search
             for (int i = inputStringLength; i > 0; i--)
             {
@@ -38,37 +41,17 @@ namespace logical_problems
                 if (biggestPalindromeStringList.Count > 0)
                     break;
             }
+
+            // concatenate same size palindrome strings
             return string.Join(",", biggestPalindromeStringList);
         }
 
+        // String reverse function
         private string Reverse(string s)
         {
             char[] arr = s.ToCharArray();
             Array.Reverse(arr);
             return new string(arr);
         }
-
-        // Extension method to reverse a string
-
-
-        //public static void RunTest()
-        //{
-        //    Dictionary<string, string> inputs = new Dictionary<string, bool>();
-        //    inputs.Add("abc", "a,b,c");
-        //    inputs.Add("nitinisagoodboy", "nitin");
-        //    inputs.Add("abaxyx", "aba,xyx");
-        //    inputs.Add("nitinspeaksmalayalam", "malayalam");
-
-        //    bool result = true;
-        //    foreach (var item in inputs)
-        //    {
-        //        result = string.Join(",", search(item.Key)) == item.Value;
-        //        if (result == false)
-        //            Console.WriteLine("Test failed for " + item.Key);
-        //    }
-        //    if (result)
-        //        Console.WriteLine("Test Passed");
-        //    Console.ReadLine();
-        //}
     }
 }

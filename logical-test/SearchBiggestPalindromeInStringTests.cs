@@ -7,7 +7,7 @@ namespace logical_test
     public class SearchBiggestPalindromeInStringTests
     {
         [TestMethod]
-        public void SearchForBiggest()
+        public void PalindromeSearchForBiggest()
         {
             // Arrange
             Logic logic = new SearchBiggestPalindromeInString();
@@ -20,7 +20,7 @@ namespace logical_test
         }
 
         [TestMethod]
-        public void SearchFor2SameSize()
+        public void PalindromeSearchFor2SameSize()
         {
             // Arrange
             Logic logic = new SearchBiggestPalindromeInString();
@@ -33,7 +33,7 @@ namespace logical_test
         }
 
         [TestMethod]
-        public void SearchForNoPalindrome()
+        public void PalindromeSearchForNoPalindrome()
         {
             // Arrange
             Logic logic = new SearchBiggestPalindromeInString();

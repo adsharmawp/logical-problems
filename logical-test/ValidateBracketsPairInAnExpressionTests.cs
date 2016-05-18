@@ -7,7 +7,7 @@ namespace logical_test
     public class ValidateBracketsPairInAnExpressionTests
     {
         [TestMethod]
-        public void EmptyString()
+        public void BracketPairEmptyString()
         {
             // Arrange
             Logic logic = new ValidateBracketsPairInAnExpression();
@@ -20,7 +20,7 @@ namespace logical_test
         }
 
         [TestMethod]
-        public void Valid1Pair()
+        public void BracketPairValid1Pair()
         {
             // Arrange
             Logic logic = new ValidateBracketsPairInAnExpression();
@@ -33,7 +33,7 @@ namespace logical_test
         }
 
         [TestMethod]
-        public void InValid1PairOpen()
+        public void BracketPairInValid1PairOpen()
         {
             // Arrange
             Logic logic = new ValidateBracketsPairInAnExpression();
@@ -46,7 +46,7 @@ namespace logical_test
         }
 
         [TestMethod]
-        public void InValid1PairClose()
+        public void BracketPairInValid1PairClose()
         {
             // Arrange
             Logic logic = new ValidateBracketsPairInAnExpression();
@@ -59,7 +59,7 @@ namespace logical_test
         }
 
         [TestMethod]
-        public void ValidMultiPairs()
+        public void BracketPairValidMultiPairs()
         {
             // Arrange
             Logic logic = new ValidateBracketsPairInAnExpression();
@@ -73,7 +73,7 @@ namespace logical_test
 
 
         [TestMethod]
-        public void InValidMultiPairs()
+        public void BracketPairInValidMultiPairs()
         {
             // Arrange
             Logic logic = new ValidateBracketsPairInAnExpression();
